@@ -1,6 +1,9 @@
   
 .tabs {
     width: 50%;
+    @media @tablet{
+        width:65%;
+    }
     @media @mobile{
         width:100%
     }
@@ -10,6 +13,9 @@
         display: flex;
         justify-content: center;
         padding-top: 60px;
+        @media @tablet{
+            padding-top: 25px;
+        }
         @media @mobile{
             padding-top: 15px;
         }
@@ -44,8 +50,12 @@
       border-right: 1px solid white;
       color: @white;
       cursor: pointer;
+      @media @tablet{
+        padding: 10px 3vw;
+      }   
       &:hover {
         background-color: @color2;
+        
       }
     }
     .tabs-link-selected {

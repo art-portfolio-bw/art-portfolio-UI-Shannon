@@ -169,6 +169,11 @@ img {
 .tabs {
   width: 50%;
 }
+@media (max-width:850px) {
+  .tabs {
+    width: 65%;
+  }
+}
 @media (max-width:550px) {
   .tabs {
     width: 100%;
@@ -180,6 +185,11 @@ img {
   display: flex;
   justify-content: center;
   padding-top: 60px;
+}
+@media (max-width:850px) {
+  .tabs .tabs-items {
+    padding-top: 25px;
+  }
 }
 @media (max-width:550px) {
   .tabs .tabs-items {
@@ -218,6 +228,11 @@ img {
   color: #ffffff;
   cursor: pointer;
 }
+@media (max-width:850px) {
+  .tabs .tabs-link {
+    padding: 10px 3vw;
+  }
+}
 .tabs .tabs-link:hover {
   background-color: #80f1ff;
 }
@@ -240,8 +255,7 @@ img {
   .top-nav {
     display: flex;
     width: 100%;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: space-between;
     height: auto;
   }
 }
@@ -250,7 +264,17 @@ img {
   height: auto;
   float: left;
   padding: 20px 20px 0 20px;
-  order: 1;
+}
+@media (max-width:850px) {
+  .top-nav .logo {
+    padding: 10px 10px 0 10px;
+  }
+}
+@media (max-width:550px) {
+  .top-nav .logo {
+    display: inline;
+    align-self: center;
+  }
 }
 .top-nav nav {
   display: flex;
@@ -258,11 +282,13 @@ img {
 }
 @media (max-width:550px) {
   .top-nav nav {
+    display: none;
+  }
+  .top-nav nav.active {
+    display: flex;
     width: 100%;
     flex-direction: column;
-    order: 2;
     margin: auto;
-    border-bottom: 1px solid #073E67;
   }
 }
 .top-nav a {
@@ -273,11 +299,21 @@ img {
   font-weight: 600;
   font-size: 1.5rem;
 }
+@media (max-width:850px) {
+  .top-nav a {
+    font-size: 1.4rem;
+    white-space: nowrap;
+    padding-top: 25px;
+  }
+}
 @media (max-width:550px) {
   .top-nav a {
     border-bottom: 1px solid #073E67;
-    padding: 0px;
+    padding: 5px;
     height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
   }
 }
 .top-nav .sign-up,
@@ -285,6 +321,87 @@ img {
   font-weight: normal;
   font-size: 1.7rem;
   padding: 18px;
+}
+@media (max-width:850px) {
+  .top-nav .sign-up,
+  .top-nav .log-in {
+    font-size: 1.5rem;
+    padding-top: 23px;
+  }
+}
+@media (max-width:550px) {
+  .top-nav .sign-up,
+  .top-nav .log-in {
+    padding: 5px;
+    height: auto;
+    font-size: 1.4rem;
+  }
+}
+#hamburger-icon {
+  display: none;
+}
+@media (max-width:550px) {
+  #hamburger-icon {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    order: 1;
+    margin: 0.5em 1.5em;
+    display: inline-block;
+    text-decoration: none;
+  }
+  #hamburger-icon:hover,
+  #hamburger-icon:focus {
+    color: #80f1ff;
+  }
+  #hamburger-icon .line {
+    display: block;
+    background: #ffffff;
+    width: 50px;
+    height: 4px;
+    background-color: #4DECFF;
+    position: absolute;
+    right: 0;
+    border-radius: 2px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+  #hamburger-icon .line.line-1 {
+    top: 0;
+    color: #4DECFF;
+  }
+  #hamburger-icon .line.line-2 {
+    top: 50%;
+  }
+  #hamburger-icon .line.line-3 {
+    top: 100%;
+  }
+  #hamburger-icon:hover .line-1,
+  #hamburger-icon:focus .line-1 {
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+  }
+  #hamburger-icon:hover .line-3,
+  #hamburger-icon:focus .line-3 {
+    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+  }
+  #hamburger-icon.active .line-1 {
+    transform: translateY(15px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(15px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(15px) translateX(0) rotate(45deg);
+  }
+  #hamburger-icon.active .line-2 {
+    opacity: 0;
+  }
+  #hamburger-icon.active .line-3 {
+    transform: translateY(-15px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-15px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-15px) translateX(0) rotate(-45deg);
+  }
 }
 body {
   box-sizing: border-box;
@@ -316,6 +433,11 @@ body {
   background-size: 50%;
   height: 650px;
 }
+@media (max-width:850px) {
+  .section {
+    padding-top: 40px;
+  }
+}
 @media (max-width:550px) {
   .section {
     padding-top: 20px;
@@ -339,5 +461,4 @@ button {
 }
 button:hover {
   background-color: #80f1ff;
-  color: #ffffff;
 }

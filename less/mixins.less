@@ -1,8 +1,18 @@
+//General
 @color1: #4DECFF;
 @color2: lighten(#4DECFF,10%);
 @white: rgb(255,255,255);
 @button-bg: #4DECFF;
 @button-color:#073E67;
+
+//menu-icon
+@height-icon: 30px;
+@width-line: 50px;
+@height-line: 4px;
+@transition-time: 0.4s;
+@rotation: 45deg;
+@translateY: (@height-icon / 2);
+@translateX: 0;
 
 
 .buttoned(){
@@ -17,10 +27,10 @@
         cursor:pointer;
         &:hover{
             background-color:@color2;
-            color:@white;
         }
     
 }
 
 //Escaping
 @mobile: ~'(max-width:550px)';
+@tablet: ~'(max-width:850px)';
