@@ -1,0 +1,26 @@
+@color1: #4DECFF;
+@color2: lighten(#4DECFF,10%);
+@white: rgb(255,255,255);
+@button-bg: #4DECFF;
+@button-color:#073E67;
+
+
+.buttoned(){
+        color: @button-color;
+        background-color: @button-bg;
+        font-size: 1.5rem;
+        border: none;
+        padding: 1vw 4vw;
+        font-weight: bolder;
+        border-radius: 5px;
+        text-align: center;
+        cursor:pointer;
+        &:hover{
+            background-color:@color2;
+            color:@white;
+        }
+    
+}
+
+//Escaping
+@mobile: ~'(max-width:550px)';

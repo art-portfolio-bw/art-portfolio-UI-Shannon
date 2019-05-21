@@ -1,0 +1,343 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kodchasan', sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Kodchasan', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Kodchasan', sans-serif;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.tabs {
+  width: 50%;
+}
+@media (max-width:550px) {
+  .tabs {
+    width: 100%;
+  }
+}
+.tabs .tabs-items {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+@media (max-width:550px) {
+  .tabs .tabs-items {
+    padding-top: 15px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.tabs .tabs-item {
+  display: none;
+  width: 85%;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+.tabs .tabs-item-selected {
+  display: block;
+}
+.tabs .tabs-item-selected p {
+  padding: 3vw 0;
+}
+.tabs .tabs-links {
+  display: flex;
+  margin-left: 20px;
+}
+.tabs .tabs-link {
+  padding: 20px 4vw;
+  font-size: 2rem;
+  background-color: #4DECFF;
+  border-right: 1px solid white;
+  color: #ffffff;
+  cursor: pointer;
+}
+.tabs .tabs-link:hover {
+  background-color: #80f1ff;
+}
+.tabs .tabs-link-selected {
+  z-index: 2;
+  border-right: 1px solid #ffffff;
+  font-weight: 600;
+  color: #073E67;
+}
+.tabs .tabs-link-selected:hover {
+  background-color: #80f1ff;
+}
+.top-nav {
+  display: block;
+  height: 65px;
+  max-width: 1100px;
+  margin: auto;
+}
+@media (max-width:550px) {
+  .top-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    height: auto;
+  }
+}
+.top-nav .logo {
+  width: 200px;
+  height: auto;
+  float: left;
+  padding: 20px 20px 0 20px;
+  order: 1;
+}
+.top-nav nav {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width:550px) {
+  .top-nav nav {
+    width: 100%;
+    flex-direction: column;
+    order: 2;
+    margin: auto;
+    border-bottom: 1px solid #073E67;
+  }
+}
+.top-nav a {
+  text-decoration: none;
+  padding: 20px;
+  height: 70px;
+  color: gray;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+@media (max-width:550px) {
+  .top-nav a {
+    border-bottom: 1px solid #073E67;
+    padding: 0px;
+    height: auto;
+  }
+}
+.top-nav .sign-up,
+.top-nav .log-in {
+  font-weight: normal;
+  font-size: 1.7rem;
+  padding: 18px;
+}
+body {
+  box-sizing: border-box;
+  min-width: 300px;
+  margin: 0;
+}
+.header-container {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4DECFF;
+}
+.header-container .header {
+  height: 50px;
+}
+.section {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+  line-height: 1.2rem;
+  padding-top: 100px;
+  background-image: url('../assets/camera-fade.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50%;
+  height: 650px;
+}
+@media (max-width:550px) {
+  .section {
+    padding-top: 20px;
+    height: 350px;
+  }
+}
+.right-section img {
+  width: 49%;
+  float: right;
+}
+button {
+  color: #073E67;
+  background-color: #4DECFF;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1vw 4vw;
+  font-weight: bolder;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #80f1ff;
+  color: #ffffff;
+}
