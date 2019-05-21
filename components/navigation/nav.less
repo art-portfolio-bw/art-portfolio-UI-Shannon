@@ -1,0 +1,151 @@
+.top-nav{
+    display: block;
+    height:65px;
+    max-width:1100px;
+    margin: auto;
+    @media @mobile{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        // flex-direction: column;
+        height: auto;
+    }
+    .logo{
+        width: 200px;
+        height: auto;
+        float: left;
+        padding: 20px 20px 0 20px;
+        @media  @tablet{
+            padding: 10px 10px 0 10px;
+        }
+        @media @mobile{
+            display: inline;
+            align-self: center
+
+        }
+    }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        @media @mobile{
+             display: none;
+             width:100%;
+             flex-direction: column;
+             margin:auto;
+    }
+    a{
+        text-decoration: none;
+        padding: 20px;
+        height: 70px;
+        color: gray;
+        font-weight: 600;
+        font-size:1.5rem;
+        @media @tablet{
+            font-size: 1.4rem;
+            white-space: nowrap;
+            padding-top: 25px;
+        }
+        @media @mobile{
+            border-bottom:1px solid @button-color;
+            padding: 5px;
+            height: auto;
+            width: 100%;
+            text-align: center;
+            font-size:1.3rem;
+        }
+    }
+    .sign-up, .log-in{
+        font-weight: normal;
+        font-size: 1.7rem;
+        padding: 18px;
+        @media @tablet{
+            font-size:1.5rem;
+            padding-top: 23px;
+        }
+        @media @mobile{
+            padding: 5px;
+            height: auto;
+            font-size: 1.4rem;
+        }
+
+    }
+}
+
+
+#hamburger-icon {
+    display:none;
+    @media @mobile{
+  width:@width-line;
+  height:@height-icon;
+  position:relative;
+  order:1;
+//   margin: (@height-icon * 2) auto @height-icon auto;
+  text-decoration:none;
+  margin: 0.5em 1.5em;
+  display:inline-block;
+  text-decoration: none;
+  &:hover, &:focus {
+    color:@color2;
+  }
+  
+  .line {
+    display:block;
+    background:@white;
+    width:@width-line;
+    height:@height-line;
+    background-color: @color1;
+    position:absolute;
+    right:0;
+    border-radius:(@height-line / 2);
+    transition: all @transition-time;
+    -webkit-transition: all @transition-time;
+    -moz-transition: all @transition-time;
+    
+    &.line-1 {
+      top:0;
+      color: @color1;
+    }
+    &.line-2 {
+      top:50%;
+    }
+    &.line-3 {
+      top:100%;
+    }
+  }
+  &:hover, &:focus {
+     .line-1 {
+        transform: translateY(@height-line / 2 * -1);
+        -webkit-transform: translateY(@height-line / 2 * -1);
+        -moz-transform: translateY(@height-line / 2 * -1);
+     }
+    .line-3 {
+        transform: translateY(@height-line / 2);
+        -webkit-transform: translateY(@height-line / 2);
+        -moz-transform: translateY(@height-line / 2);
+    }  
+  }
+  &.active {
+    .line-1 {
+      transform: translateY(@translateY) translateX(@translateX) rotate(@rotation);
+      -webkit-transform: translateY(@translateY) translateX(@translateX) rotate(@rotation);
+      -moz-transform: translateY(@translateY) translateX(@translateX) rotate(@rotation);
+    }
+    .line-2 {
+      opacity:0;
+    }
+    .line-3 {
+      transform: translateY(@translateY * -1) translateX(@translateX) rotate(@rotation * -1);
+      -webkit-transform: translateY(@translateY * -1) translateX(@translateX) rotate(@rotation * -1);
+      -moz-transform: translateY(@translateY * -1) translateX(@translateX) rotate(@rotation * -1);
+    }
+  }
+}
+}
+
+.menu--open{
+        display: flex;
+     }
+
+
+
+
