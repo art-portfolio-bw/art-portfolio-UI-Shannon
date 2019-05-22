@@ -19,10 +19,10 @@
         @media  @tablet{
             left:10px;
             top:10px;
-            border: 1px solid blue;
+            z-index:101;
         }
     }
-    nav{
+    .nav-top{
         display: flex;
         justify-content: flex-end;
         @media @mobile{
@@ -33,27 +33,30 @@
              flex-direction: column;
              margin:auto;
              order:3;
-             border: 1px solid green;
         }
     
     a{
         text-decoration: none;
         padding: 20px;
         height: 70px;
-        color: gray;
+        color: @gray;
         font-weight: 600;
         font-size:1.5rem;
+        .abt{
+        color: darken(@gray, 10%)
+        }
         @media @tablet{
             font-size: 1.4rem;
             white-space: nowrap;
             padding-top: 25px;
+            // color: @button-color;
+            border-bottom: @button-color;
         }
         @media @mobile{
             padding: 10px;
             height: auto;
             text-align: center;
             // font-size:1.3rem;
-            border: 1px solid yellow;
         }
     }
     .sign-up, .log-in{
@@ -71,6 +74,13 @@
         }
 
     }
+    .log-in{
+      color: darken(@gray, 20%);
+    }
+    .sign-up{
+      color: darken(@gray, 30%);
+    }
+
 }
 }
 
@@ -93,7 +103,6 @@
   
   .line {
     display:block;
-    background:@white;
     width:@width-line;
     height:@height-line;
     background-color: @color1;
@@ -151,5 +160,20 @@ body header .top-nav .menu--open{
         width:100%;
         flex-direction: column;
         order:3;
-        background-color: @white;
+        background-color: @color2;
+        z-index: 100;
      }
+
+.foot{
+  display: flex;
+  flex-direction: column;
+  border-top:2px solid @button-color;
+  background-color: lighten(@gray,30%);
+  padding:20px 10vw;
+  a{
+  text-decoration: none;
+  color:@button-color;
+  padding:10px;
+  font-size:1.5rem;
+  }
+}     

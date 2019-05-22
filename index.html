@@ -8,31 +8,38 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Kodchasan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <script src="./components/tabs/tabs.js" async></script>
     <script src="./components/navigation/nav.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <header>
-        <div class="top-nav">
-            <img src='assets/logo.png' alt='fotograph logo' class='logo'>
-            <div id="hamburger-icon" href="#" title="Menu" class='icon'>
-                <span class="line line-1"></span>
-                <span class="line line-2"></span>
-                <span class="line line-3"></span>
+    <div class='bg-container'>
+        <header>
+            <div class="top-nav">
+                <img src='assets/logo.png' alt='fotograph logo' class='logo'>
+                <div id="hamburger-icon" href="#" title="Menu" class='icon'>
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </div>
+                <nav class='nav-top'>
+                    <a href='#' class=>Home</a>
+                    <a href='about.html' class='abt'>About Us</a>
+                    <a href='#' class='log-in'>Log In</a>
+                    <a href='#' class='sign-up'>Sign Up</a>
+                </nav>
+
             </div>
-            <nav>
-                <a href='#'>Home</a>
-                <a href='about.html'>About Us</a>
-                <a href='#' class='log-in'>Log In</a>
-                <a href='#' class='sign-up'>Sign Up</a>
-            </nav>
 
-        </div>
-        </div>
-    </header>
+        </header>
 
+        <div class='cta'>
+            <h1>Build your<br>portfolio<br>today!</h1>
+            <button>Log In</button>
+        </div>
+    </div>
     <div class='section'>
         <div class='tabs'>
             <div class='tabs-links'>
@@ -42,31 +49,36 @@
             </div>
             <div class='tabs-items'>
                 <div class='tabs-item tabs-item-selected' data-tab="1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <button>Learn More</button>
+                    <p><img src= 'assets/logo.png' alt='logo'class='inline'> is more than a portfolio creator for new artists. We also help provide a network for
+                        those looking to grow and interact with their followers and share their work in a more
+                        professional manner. </p>
+                    <button class='learn'>Learn More</button>
                 </div>
                 <div class='tabs-item' data-tab="2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <button>Learn More</button>
+                    <p>Fotograph provides a simple and easy way to upload your photos into a portfolio.
+                        With Fotograph, you can create a customized portfolio to share with potential clients and friends alike. </p>
+                    <button class='learn'>Learn More</button>
                 </div>
                 <div class='tabs-item' data-tab="3">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                         voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <button>Learn More</button>
+                    <button class='learn'>Learn More</button>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+        <nav class="foot">
+            <a href='#' class=>Home</a>
+            <a href='about.html' class='abt'>About Us</a>
+            <a href='#' class='log-in'>Log In</a>
+            <a href='#' class='sign-up'>Sign Up</a>
+        </nav>
+    </footer>
 
 </body>
-</body>
+
 
 </html>

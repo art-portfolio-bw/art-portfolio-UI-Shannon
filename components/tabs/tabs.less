@@ -1,12 +1,12 @@
   
 .tabs {
-    width: 50%;
-    @media @tablet{
-        width:65%;
-    }
-    @media @mobile{
-        width:100%
-    }
+    width: 100%;
+    // @media @tablet{
+    //     width:65%;
+    // }
+    // @media @mobile{
+    //     width:100%
+    // }
     .tabs-items {
         width: 100%;
         // height: 300px;
@@ -33,8 +33,13 @@
     }
     .tabs-item-selected {
       display: block;
+      .inline{
+        width:120px;
+        height:auto;
+        vertical-align:middle;
+      }
       p{
-          padding: 3vw 0;
+          padding-bottom:50px;
       }
     }
   
