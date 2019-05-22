@@ -244,6 +244,31 @@ img {
 .tabs .tabs-link-selected:hover {
   background-color: #80f1ff;
 }
+.feature-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section .tabs .feature {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 20px;
+}
+.section .tabs .feature h4 {
+  font-size: 1.2rem;
+  padding: 0px;
+  font-weight: bold;
+}
+.section .tabs .feature p {
+  font-size: 1rem;
+  padding: 10px;
+  color: dimgray;
+  text-align: center;
+}
+.section .tabs .feature .fas {
+  font-size: 100px;
+  color: #00727F;
+}
 .top-nav {
   display: block;
   height: 65px;
@@ -378,7 +403,7 @@ img {
   display: block;
   width: 50px;
   height: 4px;
-  background-color: #4DECFF;
+  background-color: #00727F;
   position: absolute;
   right: 0;
   text-decoration: none;
@@ -500,7 +525,7 @@ body {
 }
 .cta button {
   color: #073E67;
-  background-color: #4DECFF;
+  background-color: #B3F7FD;
   font-size: 1.5rem;
   border: none;
   padding: 1vw 4vw;
@@ -528,7 +553,7 @@ body {
 }
 .learn {
   color: #073E67;
-  background-color: #4DECFF;
+  background-color: #B3F7FD;
   font-size: 1.5rem;
   border: none;
   padding: 1vw 4vw;
