@@ -7,32 +7,33 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        height: auto;
+        height: 56px;
     }
     .logo{
+        position: absolute;
+        left: 20px;
+        top: 20px;
         width: 200px;
         height: auto;
-        float: left;
-        padding: 20px 20px 0 20px;
+        // padding: 20px 20px 0 20px;
         @media  @tablet{
-            padding: 10px 10px 0 10px;
-        }
-        @media @mobile{
-            display: inline;
-            align-self: center;
-            order:1;
-
+            left:10px;
+            top:10px;
+            border: 1px solid blue;
         }
     }
     nav{
         display: flex;
         justify-content: flex-end;
         @media @mobile{
-             display: flex;
+            position: absolute;
+            top:50px;
+             display: none;
              width:100%;
              flex-direction: column;
              margin:auto;
              order:3;
+             border: 1px solid green;
         }
     
     a{
@@ -48,10 +49,11 @@
             padding-top: 25px;
         }
         @media @mobile{
-            padding: 5px;
+            padding: 10px;
             height: auto;
             text-align: center;
-            font-size:1.3rem;
+            // font-size:1.3rem;
+            border: 1px solid yellow;
         }
     }
     .sign-up, .log-in{
@@ -63,9 +65,9 @@
             padding-top: 23px;
         }
         @media @mobile{
-            padding: 5px;
+            padding: 10px;
             height: auto;
-            font-size: 1.4rem;
+            // font-size: 1.4rem;
         }
 
     }
@@ -78,13 +80,13 @@
     @media @mobile{
   width:@width-line;
   height:@height-icon;
-  position:absolute;
-  right: 0px;
+  position: absolute;
+  right: 5px;
+  top:5px;
   text-decoration:none;
   margin: 0.5em 1.5em;
   display:inline-block;
   text-decoration: none;
-  order:2;
   &:hover, &:focus {
     color:@color2;
   }
@@ -144,10 +146,10 @@
 }
 }
 
-// body header .top-nav .menu--open{
-//         display: flex;
-//         width:100%;
-//         flex-direction: column;
-//         margin:auto;
-//         order:3;
-//      }
+body header .top-nav .menu--open{
+        display: flex;
+        width:100%;
+        flex-direction: column;
+        order:3;
+        background-color: @white;
+     }
