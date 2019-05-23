@@ -167,20 +167,62 @@ body header .top-nav .menu--open{
 
 
 footer{
-  border-top:2px solid @button-color;
-  background-color: lighten(@gray,30%);
-  i{
-    font-size:40px;
+  border-top:2px solid @other-gray;
+  background-color: rgba(255,255, 255,.1);
+  @media @mobile{
+    display: flex;
   }
+  .bottom-menu{
+    padding:40px 0px 0px 40px;
+    @media @mobile{
+      width:49%;
+    }
+  }
+  h3{
+    font-size: 2rem;
+    font-weight:600;
+    color:lighten(@other-gray,10%);
+  }
+  
 }
 .foot{
-  display: flex;
-  flex-direction: column;
-  padding:20px 10vw;
+  display: inline-block;
+  padding:20px;
+  @media@mobile{
+    display:flex;
+    flex-direction:column;
+    padding:0px;
+  }
   a{
     text-decoration: none;
-    color:@button-color;
+    color:@other-gray;
     padding:10px;
     font-size:1.5rem;
+    @media @mobile{
+      justify-content:center;
+    }
   }
 }     
+.social-media{
+  padding:40px;
+  @media @mobile{
+    width:49%;
+  }
+  div{
+    padding-left:20px;
+    @media @mobile{
+      padding-left:0px;
+    }
+  }
+  i{
+    font-size:40px;
+    color:@color3;
+    padding:17px;
+    text-shadow:0 0 5px black;
+    @media @mobile{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+  }
+}
