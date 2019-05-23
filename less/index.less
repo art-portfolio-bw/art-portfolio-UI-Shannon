@@ -1,7 +1,6 @@
 @import './mixins.less';
 @import 'reset.less';
 @import 'global.less';
-@import '../components/tabs/tabs.less';
 @import '../components/navigation/nav.less';
   
 body {
@@ -14,13 +13,19 @@ body {
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 50%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 20px 20px -3px rgba(0, 0, 0, .85);
+  min-height:500px;
+  object-fit:cover;
   @media @tablet{
     background-size:65%;
   }
   @media @mobile{
     background-size:75%;
   }
+  @media (max-width:466px){
+    background-size:451px auto;
+  }
+
 }
   
 .header-container {
@@ -39,49 +44,200 @@ body {
   width: 50%;
   text-align: center;
   padding:150px 20px;
+ 
   @media @tablet{
     padding:100px 10px;
   }
   @media @mobile{
-    width:70%;
+    width:100%;
+    padding-top:40px;
+
   }
   h1{
     font-family: 'Anton', sans-serif;
-    color: dimgray;
+    color: @gray;
     line-height: 1.4;
     margin:20px;
+    @media @mobile{
+      color: darken(@gray,25%);
+    }
   }
-  button{
+  .cta-button{
     .buttoned();
-    padding:3% 20%;
-    font-size:2rem;
   }
 
 }
- 
-.section {
-  max-width: 1000px;
+.sub-cta{
+  text-align: center;
+  width: 100%;
   margin: auto;
-  display: flex;
-  overflow: hidden;
-  line-height: 1.2rem;
-  padding: 50px 0;
-  @media @tablet{
-    padding-top:40px;
-  }
-
+  padding:100px 50px;
+  background-color: @color3;
+  position:relative;
+  z-index:-1;
   @media @mobile{
-    padding-top:20px;
-    height:350px;
+    padding:75px 20px;
+    font-size:3rem;
+  }
+  i{
+    font-size: 50px;
+    padding: 20px;
+    color:@button-bg;
+    z-index:0;
+    text-shadow:0 0 5px @other-gray;
+  }
+  h2{
+    font-family: 'Anton', sans-serif;
+    color:lighten(@other-gray,10%);
+    line-height:1.4;
+    width:70%;
+    margin:auto;
+    @media @mobile{
+      width:95%;
+    }
+  }
+  p{
+    color:lighten(@other-gray,10%);
   }
 }
-.right-section img{
-    width:49%;
-    float: right;
+.parallax{
+  background-image:url(../assets/map.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:500px;
+  width:auto;
 }
-.learn{
-    .buttoned()
+
+.mission {
+  display: block;
+  width:100%;
+  margin:auto;
+  padding:50px;
+  background-image:linear-gradient(lighten(@other-gray,20%),@white);
+  box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.3);
+
+  .mission-btn{
+    .buttoned();
+    padding:2% 10%;
+    @media @mobile{
+      width:100%;
+    }
+  }
+  h2{background-size: cover;
+    font-family:'Anton', sans-serif;
+    color:@color3;
+  }
+  .inline{
+    width:120px;
+    height:auto;
+    vertical-align:middle;
+  }
+  p{
+    padding:50px;
+    @media @mobile{
+      padding: 50px 0;
+    }
+  }
 }
-  
-  
+.bg-container1{
+  background-image: url('../assets/texture.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;    background-size: cover;
+  background-blend-mode: lighten;
+  background-color:rgba(255,255,255,.1);
+  width:100%;
+}
+
+.feature-container{
+  width:100%;
+  text-align:center;
+  h2{
+    text-align:center;
+    padding:50px;
+    color:lighten(@other-gray,15%);
+  }
+  a{
+    text-align:center;
+  }
+  .feature-btn{
+    .buttoned();
+    padding:2% 10%;
+    text-align:center;
+    margin:40px;
+    color: @button-color;
+    background-color: @color2;
+    &:hover{
+      background-color:@button-bg;
+    }  
+  }
+}
+
+.features{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .feature{
+    width: 200px;
+    height:200px;
+    text-align: center;
+    margin:20px;
+    padding:10px;
+    border:1px solid @other-gray;
+    background-color: rgba(255,255,255,.1);
+    h4{
+      font-size:1.5rem;
+      padding:0px;
+      font-weight: bold;
+      color:lighten(@other-gray,15%);
+    }
+    p{
+      font-size: 1.4rem;
+      padding:10px;
+      color: lighten(@other-gray,10%);
+      text-align: center;
+    }
+    .fas{
+      font-size: 90px;
+      color: @color3;
+      text-shadow:0 0 5px black;
+    }
+  }
+} 
+
+.about-main h2{
+  font-family: 'Anton', sans-serif;
+    color: @white;
+    line-height: 1.4;
+    padding:70px;
+    background-color: @color3;
+}
+
+.team-container{
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-evenly;
+  max-width: 1100px;
+  margin: auto;
+  padding:10px;
+  .team{
+    margin-top:50px;
+  }
+  .team img{
+    width: 300px;
+    height:300px;
+    object-fit: cover;
+  }
+  h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 1.7rem;
+    font-weight: lighter;
+    color: @gray;
+  }
+  h4{
+    font-size:1.5rem;
+    border-bottom: 1px solid @gray;
+  }
+}
   
