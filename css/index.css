@@ -352,11 +352,16 @@ body header .top-nav .menu--open {
   background-color: rgba(0, 114, 127, 0.5);
   z-index: 100;
 }
+footer {
+  border-top: 2px solid #073E67;
+  background-color: #b5b5b5;
+}
+footer i {
+  font-size: 40px;
+}
 .foot {
   display: flex;
   flex-direction: column;
-  border-top: 2px solid #073E67;
-  background-color: #b5b5b5;
   padding: 20px 10vw;
 }
 .foot a {
@@ -420,6 +425,7 @@ body {
 @media (max-width:550px) {
   .cta {
     width: 100%;
+    padding-top: 40px;
   }
 }
 .cta h1 {
@@ -430,23 +436,21 @@ body {
 }
 @media (max-width:550px) {
   .cta h1 {
-    color: #434343;
+    color: #292929;
   }
 }
-.cta button {
+.cta .cta-button {
   color: #073E67;
   background-color: #B3F7FD;
-  font-size: 1.5rem;
-  border: none;
-  padding: 1vw 4vw;
+  font-size: 2rem;
+  padding: 3% 20%;
   font-weight: bolder;
   border-radius: 5px;
   text-align: center;
+  border: none;
   cursor: pointer;
-  padding: 3% 20%;
-  font-size: 2rem;
 }
-.cta button:hover {
+.cta .cta-button:hover {
   background-color: #80f1ff;
 }
 .sub-cta {
@@ -458,22 +462,33 @@ body {
   position: relative;
   z-index: -1;
 }
+@media (max-width:550px) {
+  .sub-cta {
+    padding: 75px 20px;
+    font-size: 3rem;
+  }
+}
 .sub-cta i {
   font-size: 50px;
   padding: 20px;
-  color: #073E67;
+  color: #B3F7FD;
   z-index: 0;
   text-shadow: 0 0 5px #b1babc;
 }
 .sub-cta h2 {
   font-family: 'Anton', sans-serif;
-  color: #b1babc;
+  color: #ccd2d4;
   line-height: 1.4;
   width: 70%;
   margin: auto;
 }
+@media (max-width:550px) {
+  .sub-cta h2 {
+    width: 95%;
+  }
+}
 .sub-cta p {
-  color: #b1babc;
+  color: #ccd2d4;
 }
 .parallax {
   background-image: url(../assets/map.jpg);
@@ -492,7 +507,28 @@ body {
   background-image: linear-gradient(#e8ebeb, #ffffff);
   box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.3);
 }
+.mission .mission-btn {
+  color: #073E67;
+  background-color: #B3F7FD;
+  font-size: 2rem;
+  padding: 3% 20%;
+  font-weight: bolder;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 2% 10%;
+}
+.mission .mission-btn:hover {
+  background-color: #80f1ff;
+}
+@media (max-width:550px) {
+  .mission .mission-btn {
+    width: 80vw;
+  }
+}
 .mission h2 {
+  background-size: cover;
   font-family: 'Anton', sans-serif;
   color: #00727F;
 }
@@ -504,44 +540,85 @@ body {
 .mission p {
   padding: 50px;
 }
+@media (max-width:550px) {
+  .mission p {
+    padding: 50px 0;
+  }
+}
 .feature-container {
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  background-image: url('../assets/texture.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .feature-container h2 {
-  display: block;
+  text-align: center;
+  padding: 50px;
+  color: #dadedf;
 }
-.feature-container .feature {
+.feature-container a {
+  text-align: center;
+}
+.feature-container .feature-btn {
+  color: #073E67;
+  background-color: #B3F7FD;
+  font-size: 2rem;
+  padding: 3% 20%;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 2% 10%;
+  text-align: center;
+  margin: 40px;
+}
+.feature-container .feature-btn:hover {
+  background-color: #80f1ff;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.features .feature {
   width: 200px;
   height: 200px;
   text-align: center;
   margin: 20px;
+  padding: 10px;
+  border: 1px solid #b1babc;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-.feature-container .feature h4 {
+.features .feature h4 {
   font-size: 1.2rem;
   padding: 0px;
   font-weight: bold;
+  color: #dadedf;
 }
-.feature-container .feature p {
+.features .feature p {
   font-size: 1rem;
   padding: 10px;
-  color: dimgray;
+  color: #ccd2d4;
   text-align: center;
 }
-.feature-container .feature .fas {
+.features .feature .fas {
   font-size: 100px;
   color: #00727F;
-  filter: drop-shadow(0 0 black);
+  text-shadow: 0 0 5px black;
 }
 .learn {
   color: #073E67;
   background-color: #B3F7FD;
-  font-size: 1.5rem;
-  border: none;
-  padding: 1vw 4vw;
+  font-size: 2rem;
+  padding: 3% 20%;
   font-weight: bolder;
   border-radius: 5px;
   text-align: center;
+  border: none;
   cursor: pointer;
 }
 .learn:hover {

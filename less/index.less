@@ -50,6 +50,8 @@ body {
   }
   @media @mobile{
     width:100%;
+    padding-top:40px;
+
   }
   h1{
     font-family: 'Anton', sans-serif;
@@ -57,13 +59,11 @@ body {
     line-height: 1.4;
     margin:20px;
     @media @mobile{
-      color: darken(@gray,15%);
+      color: darken(@gray,25%);
     }
   }
-  button{
+  .cta-button{
     .buttoned();
-    padding:3% 20%;
-    font-size:2rem;
   }
 
 }
@@ -75,22 +75,29 @@ body {
   background-color: @color3;
   position:relative;
   z-index:-1;
+  @media @mobile{
+    padding:75px 20px;
+    font-size:3rem;
+  }
   i{
     font-size: 50px;
     padding: 20px;
-    color:@button-color;
+    color:@button-bg;
     z-index:0;
     text-shadow:0 0 5px @other-gray;
   }
   h2{
     font-family: 'Anton', sans-serif;
-    color:@other-gray;
+    color:lighten(@other-gray,10%);
     line-height:1.4;
     width:70%;
     margin:auto;
+    @media @mobile{
+      width:95%;
+    }
   }
   p{
-    color:@other-gray;
+    color:lighten(@other-gray,10%);
   }
 }
 .parallax{
@@ -110,7 +117,15 @@ body {
   padding:50px;
   background-image:linear-gradient(lighten(@other-gray,20%),@white);
   box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.3);
-  h2{
+
+  .mission-btn{
+    .buttoned();
+    padding:2% 10%;
+    @media @mobile{
+      width:80vw;
+    }
+  }
+  h2{background-size: cover;
     font-family:'Anton', sans-serif;
     color:@color3;
   }
@@ -121,36 +136,64 @@ body {
   }
   p{
     padding:50px;
+    @media @mobile{
+      padding: 50px 0;
+    }
+  }
+}
+.feature-container{
+  width:100%;
+  text-align:center;
+  background-image: url('../assets/texture.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-color:rgba(255,255,255,.1);
+  h2{
+    text-align:center;
+    padding:50px;
+    color:lighten(@other-gray,15%);
+  }
+  a{
+    text-align:center;
+  }
+  .feature-btn{
+    .buttoned();
+    padding:2% 10%;
+    text-align:center;
+    margin:40px;
   }
 }
 
-.feature-container{
+.features{
   display: flex;
   flex-wrap: wrap;
-  h2{
-    display:block;
-  }
+  justify-content: center;
   .feature{
     width: 200px;
     height:200px;
     text-align: center;
     margin:20px;
+    padding:10px;
+    border:1px solid @other-gray;
+    background-color: rgba(255,255,255,.1);
     h4{
-
       font-size:1.2rem;
       padding:0px;
       font-weight: bold;
+      color:lighten(@other-gray,15%);
     }
     p{
       font-size: 1rem;
       padding:10px;
-      color: @gray;
+      color: lighten(@other-gray,10%);
       text-align: center;
     }
     .fas{
       font-size: 100px;
       color: @color3;
-      filter:drop-shadow(0 0 black);
+      text-shadow:0 0 5px black;
     }
   }
 } 
