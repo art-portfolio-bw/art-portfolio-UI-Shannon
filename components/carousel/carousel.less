@@ -1,18 +1,59 @@
+.carousel-full{
+    padding: 50px;
+    h2{
+      color:@gray;
+      font-family: 'Anton', sans-serif;
+      text-align:center;
+    }
+}
+
+
+
+.carousel-container {
+    width: 550px;
+    height:400px;
+    margin: 45px auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    box-shadow: 0px 0px 5px @gray;
+    border-radius: 10px;
+    overflow: hidden;
+    .box {
+      padding: 40px;
+      .box-title {
+        font-size: 24px;
+        padding-bottom: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+
 .box{
     display:none;
-    &-image{
-      & img{
-      max-width: 80%
-      }
+    img{
+      width:auto;
+      max-width:400px;
+      height:auto;
+      max-height:375px;
     }
     &-selected{
       display: flex;
       justify-content: center;
+      align-items:center;
     }
-  }
-  .arrow-icon{
-    border-radius: 50%;
-    max-height: min-content;
-    cursor: pointer;
-    background-color: rgba(black, .6)
-  }
+}
+.arrow-icon{
+  height:50px;
+  color:@other-gray;
+  cursor: pointer;
+  font-size: 40px;
+}
+.artist-link{
+    text-decoration:none;
+    color:@color3;
+    font-size:1.5rem;
+    text-align:center;
+}
+

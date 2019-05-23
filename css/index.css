@@ -425,6 +425,59 @@ footer h3 {
     justify-content: center;
   }
 }
+.carousel-full {
+  padding: 50px;
+}
+.carousel-full h2 {
+  color: dimgray;
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+}
+.carousel-container {
+  width: 550px;
+  height: 400px;
+  margin: 45px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px dimgray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.carousel-container .box {
+  padding: 40px;
+}
+.carousel-container .box .box-title {
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.box {
+  display: none;
+}
+.box img {
+  width: auto;
+  max-width: 400px;
+  height: auto;
+  max-height: 375px;
+}
+.box-selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-icon {
+  height: 50px;
+  color: #b1babc;
+  cursor: pointer;
+  font-size: 40px;
+}
+.artist-link {
+  text-decoration: none;
+  color: #00727F;
+  font-size: 1.5rem;
+  text-align: center;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
@@ -688,6 +741,7 @@ body {
 }
 .team-container .team {
   margin-top: 50px;
+  border-bottom: 1px solid dimgray;
 }
 .team-container .team img {
   width: 300px;
@@ -699,8 +753,18 @@ body {
   font-size: 1.7rem;
   font-weight: lighter;
   color: dimgray;
+  width: 50%;
+  margin: 0;
 }
 .team-container h4 {
   font-size: 1.5rem;
-  border-bottom: 1px solid dimgray;
+  width: 50%;
+  margin: 0;
+}
+.about-main .team-container .contact-link {
+  font-size: 32px;
+  text-decoration: none;
+  color: #00727F;
+  text-shadow: 0 0 5px #b1babc;
+  float: right;
 }

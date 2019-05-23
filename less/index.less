@@ -2,7 +2,8 @@
 @import 'reset.less';
 @import 'global.less';
 @import '../components/navigation/nav.less';
-  
+@import '../components/carousel/carousel.less';
+
 body {
     box-sizing: border-box;
     min-width: 300px;
@@ -205,12 +206,6 @@ body {
     }
   }
 } 
-
-
-
-
-
-
 .about-main h2{
   font-family: 'Anton', sans-serif;
     color: @white;
@@ -228,6 +223,7 @@ body {
   padding:10px;
   .team{
     margin-top:50px;
+    border-bottom: 1px solid @gray;
   }
   .team img{
     width: 300px;
@@ -239,10 +235,21 @@ body {
     font-size: 1.7rem;
     font-weight: lighter;
     color: @gray;
+    width:50%;
+    margin:0;
   }
   h4{
     font-size:1.5rem;
-    border-bottom: 1px solid @gray;
+    width:50%;
+    margin:0;
   }
 }
+.about-main .team-container .contact-link{
+  font-size: 32px;
+  text-decoration:none;
+  color: @color3;
+  text-shadow:0 0 5px @other-gray;
+  float:right;
+}
+
   

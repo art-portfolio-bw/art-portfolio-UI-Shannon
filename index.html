@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="./components/navigation/nav.js" async></script>
-    <script src="./components/carousel.js" async></script>
+    <script src="./components/carousel/carousel.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -59,6 +59,35 @@
         <a href='https://fotograph-app.netlify.com/sign-up'><button class='mission-btn'>Try It Now</button></a>
     </div>
 
+    <section class='carousel-full'>
+        <h2>See what other artists are posting</h2>
+        <div class="carousel-container">
+
+            <i class='fas fa-chevron-left arrow-icon' id="left-button"></i>
+            <div class="box box-selected">
+                <img src='assets/carousel/Danielle.png' alt='mug says begin on table'>
+            </div>
+
+            <div class="box">
+                <img src='assets/carousel/David.png' alt='aerial view of forest'>
+            </div>
+
+            <div class="box">
+                <img src='assets/carousel/Jordan.jpg' alt='work hard neon lights'>
+            </div>
+
+            <div class="box">
+                <img src='assets/carousel/Kristopher.png' alt='sparkler in hand sticking out of water'>
+            </div>
+
+            <div class="box">
+                <img src='assets/carousel/Thought.png' alt='table with mug and computer'>
+            </div>
+            <i class='fas fa-chevron-right arrow-icon' id="right-button"></i>
+        </div>
+        <a href='https://fotograph-app.netlify.com' class='artist-link'>Click here to see more</a>
+    </section>
+
     <div class='bg-container1'>
         <section class='feature-container'>
             <h2>Features</h2>
@@ -102,34 +131,6 @@
             <a href='https://fotograph-app.netlify.com/sign-up'><button class='feature-btn'>Sign Up</button></a>
         </section>
 
-
-        <div class="section">
-            <div class="arrow-icon" id="left-button">&larr;</div>
-            <div class="box box-selected">
-                <div class="box-title">Box Title 1</div>
-                <div class="box-description">Box 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus
-                    nibh,
-                    gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis,
-                    accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit
-                    quis.
-                    Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin
-                    vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac
-                    habitasse platea dictumst.</div>
-            </div>
-
-            <div class="box">
-                <div class="box-title">Box Title 2</div>
-                <div class="box-description">Box 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus
-                    nibh,
-                    gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis,
-                    accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit
-                    quis.
-                    Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin
-                    vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac
-                    habitasse platea dictumst.</div>
-            </div>
-            <div class="arrow-icon" id="right-button">&rarr;</div>
-        </div>
 
         <footer>
             <div class='bottom-menu'>
