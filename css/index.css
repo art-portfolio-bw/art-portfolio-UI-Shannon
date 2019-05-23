@@ -356,20 +356,25 @@ footer {
   border-top: 2px solid #b1babc;
   background-color: rgba(255, 255, 255, 0.1);
 }
+.footer-menus {
+  display: flex;
+  justify-content: space-around;
+}
 @media (max-width:550px) {
-  footer {
-    display: flex;
+  .footer-menus {
+    text-align: center;
   }
 }
-footer .bottom-menu {
+.footer-menus .bottom-menu {
   padding: 40px 0px 0px 40px;
+  max-width: 49%;
 }
 @media (max-width:550px) {
-  footer .bottom-menu {
+  .footer-menus .bottom-menu {
     width: 49%;
   }
 }
-footer h3 {
+.footer-menus h3 {
   font-size: 2rem;
   font-weight: 600;
   color: #ccd2d4;
@@ -382,7 +387,7 @@ footer h3 {
   .foot {
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 15px;
   }
 }
 .foot a {
@@ -393,7 +398,7 @@ footer h3 {
 }
 @media (max-width:550px) {
   .foot a {
-    justify-content: center;
+    padding: 15px;
   }
 }
 .social-media {
@@ -404,12 +409,13 @@ footer h3 {
     width: 49%;
   }
 }
-.social-media div {
+.social-media .social-links {
   padding-left: 20px;
 }
 @media (max-width:550px) {
-  .social-media div {
+  .social-media .social-links {
     padding-left: 0px;
+    padding-top: 10px;
   }
 }
 .social-media i {
@@ -423,15 +429,20 @@ footer h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 3px;
   }
+}
+.copy {
+  text-align: center;
+  color: #b1babc;
 }
 .carousel-full {
   padding: 50px;
+  text-align: center;
 }
 .carousel-full h2 {
-  color: dimgray;
+  color: #00727F;
   font-family: 'Anton', sans-serif;
-  text-align: center;
 }
 .carousel-container {
   width: 550px;
@@ -446,11 +457,6 @@ footer h3 {
 }
 .carousel-container .box {
   padding: 40px;
-}
-.carousel-container .box .box-title {
-  font-size: 24px;
-  padding-bottom: 10px;
-  font-weight: bold;
 }
 .box {
   display: none;
@@ -468,15 +474,29 @@ footer h3 {
 }
 .arrow-icon {
   height: 50px;
-  color: #b1babc;
+  color: #00727F;
   cursor: pointer;
   font-size: 40px;
 }
 .artist-link {
-  text-decoration: none;
-  color: #00727F;
-  font-size: 1.5rem;
+  color: #073E67;
+  background-color: #B3F7FD;
+  font-size: 2rem;
+  padding: 3% 20%;
+  font-weight: bolder;
+  border-radius: 5px;
   text-align: center;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #80f1ff;
+  padding: 2% 10%;
+}
+.artist-link:hover {
+  background-color: #80f1ff;
+}
+.artist-link:hover {
+  background-color: #B3F7FD;
 }
 body {
   box-sizing: border-box;
@@ -611,7 +631,7 @@ body {
   width: 100%;
   margin: auto;
   padding: 50px;
-  background-image: linear-gradient(#e8ebeb, #ffffff);
+  background-image: linear-gradient(#ffffff, #e8ebeb);
   box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.3);
 }
 .mission .mission-btn {
@@ -724,12 +744,22 @@ body {
   color: #00727F;
   text-shadow: 0 0 5px black;
 }
+.bg-container2 {
+  background-image: url('../assets/texture1.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
 .about-main h2 {
   font-family: 'Anton', sans-serif;
   color: #ffffff;
   line-height: 1.4;
   padding: 70px;
   background-color: #00727F;
+  background-image: linear-gradient(#00a0b2, #00727F);
 }
 .team-container {
   display: flex;
@@ -741,7 +771,16 @@ body {
 }
 .team-container .team {
   margin-top: 50px;
-  border-bottom: 1px solid dimgray;
+  padding: 10px;
+  background-image: linear-gradient(#b1babc, #dadedf);
+}
+.team-container .person-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.team-container .person-info {
+  width: 60%;
 }
 .team-container .team img {
   width: 300px;
@@ -752,19 +791,18 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 1.7rem;
   font-weight: lighter;
-  color: dimgray;
-  width: 50%;
+  color: #505050;
   margin: 0;
 }
 .team-container h4 {
   font-size: 1.5rem;
-  width: 50%;
   margin: 0;
 }
 .about-main .team-container .contact-link {
   font-size: 32px;
   text-decoration: none;
   color: #00727F;
-  text-shadow: 0 0 5px #b1babc;
+  text-shadow: 0 0 5px #B3F7FD;
   float: right;
+  padding-left: 10px;
 }

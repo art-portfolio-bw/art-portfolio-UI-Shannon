@@ -165,15 +165,19 @@ body header .top-nav .menu--open{
   z-index: 100;
 }
 
-
 footer{
   border-top:2px solid @other-gray;
   background-color: rgba(255,255, 255,.1);
+}
+.footer-menus{
+  display: flex;
+  justify-content: space-around;
   @media @mobile{
-    display: flex;
+  text-align:center;
   }
   .bottom-menu{
     padding:40px 0px 0px 40px;
+    max-width:49%;
     @media @mobile{
       width:49%;
     }
@@ -191,7 +195,7 @@ footer{
   @media@mobile{
     display:flex;
     flex-direction:column;
-    padding:0px;
+    padding:15px;
   }
   a{
     text-decoration: none;
@@ -199,7 +203,7 @@ footer{
     padding:10px;
     font-size:1.5rem;
     @media @mobile{
-      justify-content:center;
+      padding:15px;
     }
   }
 }
@@ -208,10 +212,11 @@ footer{
   @media @mobile{
     width:49%;
   }
-  div{
+  .social-links{
     padding-left:20px;
     @media @mobile{
       padding-left:0px;
+      padding-top:10px;
     }
   }
   i{
@@ -223,6 +228,11 @@ footer{
       display:flex;
       flex-direction:column;
       justify-content:center;
+      padding:3px;
     }
   }
+}
+.copy{
+  text-align: center;
+  color:@other-gray;
 }

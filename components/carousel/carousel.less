@@ -1,13 +1,11 @@
 .carousel-full{
     padding: 50px;
+    text-align:center;
     h2{
-      color:@gray;
+      color:@color3;
       font-family: 'Anton', sans-serif;
-      text-align:center;
     }
 }
-
-
 
 .carousel-container {
     width: 550px;
@@ -21,11 +19,6 @@
     overflow: hidden;
     .box {
       padding: 40px;
-      .box-title {
-        font-size: 24px;
-        padding-bottom: 10px;
-        font-weight: bold;
-      }
     }
   }
 
@@ -46,14 +39,17 @@
 }
 .arrow-icon{
   height:50px;
-  color:@other-gray;
+  color:@color3;
   cursor: pointer;
   font-size: 40px;
 }
 .artist-link{
-    text-decoration:none;
-    color:@color3;
-    font-size:1.5rem;
-    text-align:center;
+  .buttoned();
+    font-weight: bold;
+    background-color:@color2;
+    padding: 2% 10%;
+    &:hover{
+      background-color:@button-bg;
+    }    
 }
 
