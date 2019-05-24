@@ -7,9 +7,14 @@ $( document ).ready(function() { //checks of doc is ready to be manipulated
   });
 
 const mobileMenu = document.querySelector('nav')
+const mobileIcons = document.querySelectorAll('.hidden')
 const toggleMenu = ()=>{
 
     mobileMenu.classList.toggle('menu--open')
+    mobileIcons.forEach((icon)=>{
+    icon.classList.toggle('icon-menu--open')
+    icon.classList.remove('hidden')
+  })
 }
 
 const ham = document.querySelector('.icon')

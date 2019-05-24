@@ -209,24 +209,20 @@ img {
     order: 3;
   }
 }
-.nav-top a {
+.nav-top .hidden {
+  display: none;
+}
+.nav-top .nav-link {
   text-decoration: none;
   padding: 20px;
   height: 70px;
   color: dimgray;
   font-weight: 600;
   font-size: 1.5rem;
-}
-.nav-top a .abt {
-  color: #505050;
-}
-@media (max-width:550px) {
-  .nav-top a .abt {
-    color: dimgray;
-  }
+  cursor: pointer;
 }
 @media (max-width:850px) {
-  .nav-top a {
+  .nav-top .nav-link {
     font-size: 1.4rem;
     white-space: nowrap;
     padding-top: 25px;
@@ -234,11 +230,21 @@ img {
   }
 }
 @media (max-width:550px) {
-  .nav-top a {
-    padding: 10px;
+  .nav-top .nav-link {
+    padding: 5px;
     height: auto;
     text-align: center;
     color: #ffffff;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+  }
+}
+.nav-top .nav-link .abt {
+  color: #505050;
+}
+@media (max-width:550px) {
+  .nav-top .nav-link .abt {
+    color: dimgray;
   }
 }
 .nav-top .sign-up,
@@ -259,6 +265,7 @@ img {
   .nav-top .log-in {
     padding: 10px;
     height: auto;
+    font-size: 1.8rem;
   }
 }
 .nav-top .log-in {
@@ -275,7 +282,23 @@ img {
 @media (max-width:550px) {
   .nav-top .sign-up {
     color: #ffffff;
+    margin-bottom: 0px;
   }
+}
+body header .top-nav .menu--open {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  order: 3;
+  height: 105vw;
+  background-image: linear-gradient(#484A51, #787b87);
+  z-index: 100;
+}
+.icon-menu--open {
+  color: #B3F7FD;
+  font-size: 12vw;
+  text-align: center;
+  cursor: pointer;
 }
 #hamburger-icon {
   display: none;
@@ -343,14 +366,6 @@ img {
   transform: translateY(-15px) translateX(0) rotate(-45deg);
   -webkit-transform: translateY(-15px) translateX(0) rotate(-45deg);
   -moz-transform: translateY(-15px) translateX(0) rotate(-45deg);
-}
-body header .top-nav .menu--open {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  order: 3;
-  background-color: rgba(0, 114, 127, 0.5);
-  z-index: 100;
 }
 footer {
   border-top: 2px solid #b1babc;
@@ -812,7 +827,7 @@ body {
   line-height: 1.4;
   padding: 70px;
   background-color: #00727F;
-  background-image: linear-gradient(#00a0b2, #00727F);
+  background-image: linear-gradient(#00b7cc, #00727F);
 }
 .team-container {
   display: flex;

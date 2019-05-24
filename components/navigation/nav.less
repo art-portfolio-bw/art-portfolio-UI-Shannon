@@ -15,7 +15,6 @@
     top: 20px;
     width: 200px;
     height: auto;
-    // padding: 20px 20px 0 20px;
     @media  @tablet{
       left:10px;
       top:10px;
@@ -35,19 +34,18 @@
     margin:auto;
     order:3;
   }
-  a{
+  .hidden{
+    display:none;
+  }
+
+  .nav-link{
     text-decoration: none;
     padding: 20px;
     height: 70px;
     color: @gray;
     font-weight: 600;
     font-size:1.5rem;
-    .abt{
-      color: darken(@gray, 10%);
-      @media @mobile{
-        color:@gray;
-      }
-    }
+    cursor: pointer;
     @media @tablet{
       font-size: 1.4rem;
       white-space: nowrap;
@@ -55,10 +53,18 @@
       border-bottom: @button-color;
     }
     @media @mobile{
-      padding: 10px;
+      padding: 5px;
       height: auto;
       text-align: center;
       color: @white;
+      font-size:1.7rem;
+      margin-bottom:10px;
+    }
+    .abt{
+      color: darken(@gray, 10%);
+      @media @mobile{
+        color:@gray;
+      }
     }      
   }
   .sign-up, .log-in{
@@ -72,6 +78,7 @@
     @media @mobile{
       padding: 10px;
       height: auto;
+      font-size:1.8rem;
     }
   }
   .log-in{
@@ -84,8 +91,25 @@
     color: darken(@gray, 30%);
     @media @mobile{
       color: @white;
+      margin-bottom:0px;
     }
   }
+}
+
+body header .top-nav .menu--open{
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  order:3;
+  height: 105vw;
+  background-image:linear-gradient(@dark-gray,lighten(@dark-gray,20%));
+  z-index: 100;
+}
+.icon-menu--open{
+  color: @button-bg;
+  font-size: 12vw;
+  text-align:center;
+  cursor: pointer;
 }
 
 #hamburger-icon {
@@ -156,14 +180,7 @@
   }
 }
 
-body header .top-nav .menu--open{
-  display: flex;
-  width:100%;
-  flex-direction: column;
-  order:3;
-  background-color: rgba(0, 114, 127,.5);
-  z-index: 100;
-}
+
 
 footer{
   border-top:2px solid @other-gray;
