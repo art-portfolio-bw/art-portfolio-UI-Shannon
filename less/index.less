@@ -99,6 +99,8 @@ body {
   }
   p{
     color:lighten(@other-gray,10%);
+    text-align:justify;
+    padding: 0px 3px;
   }
 }
 .parallax{
@@ -118,7 +120,9 @@ body {
   padding:50px;
   background-image:linear-gradient(@white,lighten(@other-gray,20%));
   box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.3);
-
+  @media @mobile{
+    text-align: justify;
+  }
   .mission-btn{
     .buttoned();
     padding:2% 10%;
@@ -129,6 +133,9 @@ body {
   h2{background-size: cover;
     font-family:'Anton', sans-serif;
     color:@color3;
+    @media @mobile{
+      text-align:center;
+    }
   }
   .inline{
     width:120px;
@@ -138,7 +145,10 @@ body {
   p{
     padding:50px;
     @media @mobile{
-      padding: 50px 0;
+      padding: 50px 3px;;
+      @media @mobile{
+        text-align: justify;
+      }
     }
   }
 }

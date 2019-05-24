@@ -440,9 +440,19 @@ footer {
   padding: 50px;
   text-align: center;
 }
+@media (max-width:550px) {
+  .carousel-full {
+    padding: 50px 0px;
+  }
+}
 .carousel-full h2 {
   color: #00727F;
   font-family: 'Anton', sans-serif;
+}
+@media (max-width:550px) {
+  .carousel-full h2 {
+    font-size: 2rem;
+  }
 }
 .carousel-container {
   width: 550px;
@@ -455,8 +465,24 @@ footer {
   border-radius: 10px;
   overflow: hidden;
 }
+@media (max-width:550px) {
+  .carousel-container {
+    box-shadow: none;
+  }
+}
 .carousel-container .box {
   padding: 40px;
+}
+@media (max-width:550px) {
+  .carousel-container .box {
+    padding: 20px 0px;
+  }
+}
+@media (max-width:550px) {
+  .carousel-container {
+    width: 95%;
+    height: auto;
+  }
 }
 .box {
   display: none;
@@ -466,6 +492,11 @@ footer {
   max-width: 400px;
   height: auto;
   max-height: 375px;
+}
+@media (max-width:550px) {
+  .box img {
+    max-width: 70vw;
+  }
 }
 .box-selected {
   display: flex;
@@ -494,6 +525,11 @@ footer {
 }
 .artist-link:hover {
   background-color: #80f1ff;
+}
+@media (max-width:550px) {
+  .artist-link {
+    width: 70vw;
+  }
 }
 .artist-link:hover {
   background-color: #B3F7FD;
@@ -616,6 +652,8 @@ body {
 }
 .sub-cta p {
   color: #ccd2d4;
+  text-align: justify;
+  padding: 0px 3px;
 }
 .parallax {
   background-image: url(../assets/map.jpg);
@@ -633,6 +671,11 @@ body {
   padding: 50px;
   background-image: linear-gradient(#ffffff, #e8ebeb);
   box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.3);
+}
+@media (max-width:550px) {
+  .mission {
+    text-align: justify;
+  }
 }
 .mission .mission-btn {
   color: #073E67;
@@ -659,6 +702,11 @@ body {
   font-family: 'Anton', sans-serif;
   color: #00727F;
 }
+@media (max-width:550px) {
+  .mission h2 {
+    text-align: center;
+  }
+}
 .mission .inline {
   width: 120px;
   height: auto;
@@ -669,7 +717,12 @@ body {
 }
 @media (max-width:550px) {
   .mission p {
-    padding: 50px 0;
+    padding: 50px 3px;
+  }
+}
+@media (max-width:550px) and (max-width:550px) {
+  .mission p {
+    text-align: justify;
   }
 }
 .bg-container1 {
