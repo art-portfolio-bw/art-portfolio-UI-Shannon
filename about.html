@@ -2,15 +2,16 @@
 <html>
 
 <head>
-    <title>tograph</title>
-    <link rel="icon" href="assets/logocam.png">
+    <title>fotograph</title>
+    <link rel="icon" href="assets/logo-small.png">
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Kodchasan&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./components/tabs/tabs.js" async></script>
     <script src="./components/navigation/nav.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -20,83 +21,171 @@
         <div class="top-nav">
             <img src='assets/logo.png' alt='fotograph logo' class='logo'>
             <div id="hamburger-icon" href="#" title="Menu" class='icon'>
-                    <span class="line line-1"></span>
-                    <span class="line line-2"></span>
-                    <span class="line line-3"></span>
-                </div>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </div>
             <nav class='nav-top'>
-                <a href='index.html' >Home</a>
-                <a href='#'class='abt'>About Us</a>
-                <a href='https://fotograph-app.netlify.com/login' class='log-in'>Log In</a>
-                <a href='https://fotograph-app.netlify.com/sign-up' class='sign-up'>Sign Up</a>
+                <a href= 'index.html' class='fas fa-home hidden'></a>
+                <a href='#' class='nav-link'>Home</a>
+                <a href='about.html' class='fas fa-users hidden'></a>
+                <a href='about.html' class='abt nav-link'>About Us</a>
+                <a href= 'https://fotograph-app.netlify.com/login'class='fas fa-sign-in-alt hidden'></a>
+                <a href='https://fotograph-app.netlify.com/login' class='log-in nav-link'>Log In</a>
+                <a href='https://fotograph-app.netlify.com/sign-up' class='fas fa-user-plus hidden'></a>
+                <a href='https://fotograph-app.netlify.com/sign-up' class='sign-up nav-link'>Sign Up</a>
             </nav>
         </div>
     </header>
+    <div class='bg-container2'>
+        <div class='about-main'>
+            <h2>Meet the Team</h2>
+            <div class='team-container'>
 
-    <div class='about-main'>
-        <h2>Meet the Team</h2>
-        <div class='team-container'>
-            <div class='team person1'>
-                <img src='https://avatars2.githubusercontent.com/u/44785921?s=460&v=4' alt='bhumi profile pic'>
-                <div class='contact'>
-                <h3>Bhumi Patel</h3>
-                <h4>Team Lead</h4>
-                <a href="#" class="fa fa-github"></a>
+                <div class='team person1'>
+                    <img src='https://avatars2.githubusercontent.com/u/44785921?s=460&v=4' alt='bhumi profile pic'>
+                    <div class='person-content'>
+                        <div class='person-info'>
+                            <h3>Bhumi Patel</h3>
+                            <h4>Team Lead</h4>
+                        </div>
+                        <div class='person-links'>
+                            <a href="https://github.com/bhumip214" class="fa fa-github contact-link"></a>
+                            <a href="https://www.linkedin.com/in/bhumi-patel-28000a184/"
+                                class='fa fa-linkedin contact-link'></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='team person2'>
+                    <img src='assets/heymi.JPG' alt='heymi profile pic'>
+                    <div class='person-content'>
+                        <div class='person-info'>
+                            <h3>Heymi Vanegas</h3>
+                            <h4>UX Designer</h4>
+                        </div>
+                        <div class='person-links'>
+                            <a href="https://github.com/heymiday" class="fa fa-github contact-link"></a>
+                            <a href="https://www.linkedin.com/in/heymi-vanegas-50b81b182/"
+                                class='fa fa-linkedin contact-link'></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='team person3'>
+                    <img src='https://avatars0.githubusercontent.com/u/4283962?s=400&v=4' alt='divya profile pic'>
+                    <div class='person-content'>
+                        <div class='person-info'>
+                            <h3>Divya Nair</h3>
+                            <h4>Back End Developer</h4>
+                        </div>
+                        <div class='person-links'>
+                            <a href="https://github.com/dsnair" class="fa fa-github contact-link"></a>
+                            <a href="www.linkedin.com/in/dsnair/" class='fa fa-linkedin contact-link'></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='team person4'>
+                    <img src='https://avatars3.githubusercontent.com/u/47289060?s=400&v=4' alt='amanda profile pic'>
+                    <div class='person-content'>
+                        <div class='person-info'>
+                            <h3>Amanda Lane</h3>
+                            <h4>Front End Developer</h4>
+                        </div>
+                        <div class='person-links'>
+                            <a href="https://github.com/amlane" class="fa fa-github contact-link"></a>
+                            <a href="https://www.linkedin.com/in/amanda-lane-dev/"
+                                class='fa fa-linkedin contact-link'></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='team person5'>
+                    <img src='https://avatars0.githubusercontent.com/u/34466548?s=460&v=4' alt='jacob profile pic'>
+                    <div class='person-content'>
+                        <div class='person-info'>
+                            <h3>Jacob Tonna</h3>
+                            <h4>Front End Developer</h4>
+                        </div>
+                        <div class='person-links'>
+                            <a href="https://github.com/Jtonna" class="fa fa-github contact-link"></a>
+                            <a href="https://www.linkedin.com/in/jtonna/" class='fa fa-linkedin contact-link'></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='team person6'>
+                    <img src='assets/jakub.jpg' alt='jakub profile pic'>
+                    <div class='person-content'>
+                        <div class='person-info'>
+                            <h3>Jakub Maleta</h3>
+                            <h4>UI Developer</h4>
+                        </div>
+                        <div class='person-links'>
+                            <a href="https://github.com/nanoblit/" class="fa fa-github contact-link"></a>
+                            <a href="https://www.linkedin.com/in/jakub-maleta-633a92180/"
+                                class='fa fa-linkedin contact-link'></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='team person7'>
+                    <img src='https://avatars2.githubusercontent.com/u/48270435?s=460&v=4' alt='wes profile pic'>
+                    <div class='person-content'>
+                        <div class='person-info'>
+                            <h3>Wes Jonke</h3>
+                            <h4>UI Developer</h4>
+                        </div>
+                        <div class='person-links'>
+                            <a href="https://github.com/Wjonke" class="fa fa-github contact-link"></a>
+                            <a href="https://www.linkedin.com/in/wes-jonke-05409861/-link"
+                                class='fa fa-linkedin contact-link'></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='team person8'>
+                    <img src='assets/shannon.JPG' alt='shannon profile pic'>
+                    <div class='person-content'>
+                        <div class='person-info'>
+                            <h3>Shannon Yoshikawa</h3>
+                            <h4>UI Developer</h4>
+                        </div>
+                        <div class='person-links'>
+                            <a href="https://github.com/shannonyoshi" class="fa fa-github contact-link"></a>
+                            <a href="linkedin.com/in/shannon-yoshikawa-76964b105"
+                                class='fa fa-linkedin contact-link'></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class='team person2'>
-                <img src='assets/heymi.JPG' alt='heymi profile pic'>
-                <h3>Heymi Vanegas</h3>
-                <h4>UX Designer</h4>
-            </div>
-
-            <div class='team person3'>
-                <img src='https://avatars0.githubusercontent.com/u/4283962?s=400&v=4' alt='divya profile pic'>
-                <h3>Divya Nair</h3>
-                <h4>Back End Developer</h4>
-            </div>
-
-            <div class='team person4'>
-                <img src='https://avatars3.githubusercontent.com/u/47289060?s=400&v=4' alt='amanda profile pic'>
-                <h3>Amanda Lane</h3>
-                <h4>Front End Developer</h4>
-            </div>
-
-            <div class='team person5'>
-                <img src='https://avatars0.githubusercontent.com/u/34466548?s=460&v=4' alt='jacob profile pic'>
-                <h3>Jacob Tonna</h3>
-                <h4>Front End Developer</h4>
-            </div>
-
-            <div class='team person6'>
-                <img src='assets/jakub.jpg' alt='jakub profile pic'>
-                <h3>Jakub Maleta</h3>
-                <h4>UI Developer</h4>
-            </div>
-
-            <div class='team person7'>
-                <img src='https://avatars2.githubusercontent.com/u/48270435?s=460&v=4' alt='wes profile pic'>
-                <h3>Wes Jonke</h3>
-                <h4>UI Developer</h4>
-            </div>
-
-            <div class='team person8'>
-                <img src='assets/shannon.JPG' alt='shannon profile pic'>
-                <h3>Shannon Yoshikawa</h3>
-                <h4>UI Developer</h4>
-            </div>
         </div>
+
+
+        <footer>
+            <div class='footer-menus'>
+                <div class='bottom-menu'>
+                    <h3>Menu</h3>
+                    <nav class="foot">
+                        <a href='index.html' class=>Home</a>
+                        <a href='about.html' class='abt'>About Us</a>
+                        <a href='https://fotograph-app.netlify.com/login' class='log-in'>Log In</a>
+                        <a href='https://fotograph-app.netlify.com/sign-up' class='sign-up'>Sign Up</a>
+                    </nav>
+                </div>
+                <div class='social-media'>
+                    <h3>Follow&nbsp;Us</h3>
+                    <div class='social-links'>
+                        <i class='fab fa-linkedin'></i>
+                        <i class='fab fa-twitter'></i>
+                        <i class='fab fa-facebook'></i>
+                        <i class='fab fa-github'></i>
+                    </div>
+                </div>
+            </div>
+            <p class='copy'>&copy; Copyright 2019, Fotograph</p>
     </div>
-
-
-    <footer>
-        <nav class="foot">
-            <a href='index.html' class=>Home</a>
-            <a href='about.html' class='abt'>About Us</a>
-            <a href='https://fotograph-app.netlify.com/login' class='log-in'>Log In</a>
-            <a href='https://fotograph-app.netlify.com/sign-up' class='sign-up'>Sign Up</a>
-        </nav>
     </footer>
 
 </body>

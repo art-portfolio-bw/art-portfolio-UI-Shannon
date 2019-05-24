@@ -3,7 +3,7 @@
 
 <head>
     <title>fotograph</title>
-    <!-- <link rel="icon" href="./favicon.ico"> -->
+    <link rel="icon" href="assets/logo-small.png">
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <script src="./components/tabs/tabs.js" async></script>
     <script src="./components/navigation/nav.js" async></script>
+    <script src="./components/carousel/carousel.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -27,10 +27,14 @@
                     <span class="line line-3"></span>
                 </div>
                 <nav class='nav-top'>
-                    <a href='#'>Home</a>
-                    <a href='about.html' class='abt'>About Us</a>
-                    <a href='ttps://fotograph-app.netlify.com/login' class='log-in'>Log In</a>
-                    <a href='https://fotograph-app.netlify.com/sign-up' class='sign-up'>Sign Up</a>
+                    <a href= 'index.html' class='fas fa-home hidden'></a>
+                    <a href='#' class='nav-link'>Home</a>
+                    <a href='about.html' class='fas fa-users hidden'></a>
+                    <a href='about.html' class='abt nav-link'>About Us</a>
+                    <a href= 'https://fotograph-app.netlify.com/login'class='fas fa-sign-in-alt hidden'></a>
+                    <a href='https://fotograph-app.netlify.com/login' class='log-in nav-link'>Log In</a>
+                    <a href='https://fotograph-app.netlify.com/sign-up' class='fas fa-user-plus hidden'></a>
+                    <a href='https://fotograph-app.netlify.com/sign-up' class='sign-up nav-link'>Sign Up</a>
                 </nav>
             </div>
         </header>
@@ -59,6 +63,35 @@
         <a href='https://fotograph-app.netlify.com/sign-up'><button class='mission-btn'>Try It Now</button></a>
     </div>
 
+    <section class='carousel-full'>
+        <h2>See what other artists are posting</h2>
+        <div class="carousel-container">
+
+            <i class='fas fa-chevron-left arrow-icon' id="left-button"></i>
+            <div class="box box-selected">
+                <img src='assets/carousel/Danielle.png' alt='mug says begin on table'>
+            </div>
+
+            <div class="box">
+                <img src='assets/carousel/David.png' alt='aerial view of forest'>
+            </div>
+
+            <div class="box">
+                <img src='assets/carousel/Jordan.jpg' alt='work hard neon lights'>
+            </div>
+
+            <div class="box">
+                <img src='assets/carousel/Kristopher.png' alt='sparkler in hand sticking out of water'>
+            </div>
+
+            <div class="box">
+                <img src='assets/carousel/Thought.png' alt='table with mug and computer'>
+            </div>
+            <i class='fas fa-chevron-right arrow-icon' id="right-button"></i>
+        </div>
+        <a href='https://fotograph-app.netlify.com'><button class='artist-link'>See More</button></a>
+    </section>
+
     <div class='bg-container1'>
         <section class='feature-container'>
             <h2>Features</h2>
@@ -70,7 +103,7 @@
                 </div>
                 <div class='feature like'>
                     <h4>Like</h4>
-                    <p>Participate in the community by liking artists' photos</p>
+                    <p>Participate by liking other artists' photos</p>
                     <i class='fas fa-heart'></i>
                 </div>
                 <div class='feature track'>
@@ -102,29 +135,32 @@
             <a href='https://fotograph-app.netlify.com/sign-up'><button class='feature-btn'>Sign Up</button></a>
         </section>
 
+
         <footer>
-            <div class='bottom-menu'>
-                <h3>Menu</h3>
-                <nav class="foot">
-                    <a href='index.html' class=>Home</a>
-                    <a href='about.html' class='abt'>About Us</a>
-                    <a href='https://fotograph-app.netlify.com/login' class='log-in'>Log In</a>
-                    <a href='https://fotograph-app.netlify.com/sign-up' class='sign-up'>Sign Up</a>
-                </nav>
+            <div class='footer-menus'>
+                <div class='bottom-menu'>
+                    <h3>Menu</h3>
+                    <nav class="foot">
+                        <a href='index.html' class=>Home</a>
+                        <a href='about.html' class='abt'>About Us</a>
+                        <a href='https://fotograph-app.netlify.com/login' class='log-in'>Log In</a>
+                        <a href='https://fotograph-app.netlify.com/sign-up' class='sign-up'>Sign Up</a>
+                    </nav>
+                </div>
+                <div class='social-media'>
+                    <h3>Follow&nbsp;Us</h3>
+                    <div>
+                        <i class='fab fa-linkedin'></i>
+                        <i class='fab fa-twitter'></i>
+                        <i class='fab fa-facebook'></i>
+                        <i class='fab fa-github'></i>
+                    </div>
+                </div>
             </div>
-            <div class='social-media'>
-                <h3>Follow Us</h3>
-                <div>
-                <i class='fab fa-linkedin'></i>
-                <i class='fab fa-twitter'></i>
-                <i class='fab fa-facebook'></i>
-                <i class='fab fa-github'></i>
-            </div>
-            </div>
+            <p class='copy'>&copy; Copyright 2019, Fotograph</p>
     </div>
+
     </footer>
-
 </body>
-
 
 </html>

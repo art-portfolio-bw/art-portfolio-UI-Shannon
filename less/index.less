@@ -2,7 +2,8 @@
 @import 'reset.less';
 @import 'global.less';
 @import '../components/navigation/nav.less';
-  
+@import '../components/carousel/carousel.less';
+
 body {
     box-sizing: border-box;
     min-width: 300px;
@@ -98,6 +99,8 @@ body {
   }
   p{
     color:lighten(@other-gray,10%);
+    text-align:justify;
+    padding: 0px 3px;
   }
 }
 .parallax{
@@ -115,9 +118,11 @@ body {
   width:100%;
   margin:auto;
   padding:50px;
-  background-image:linear-gradient(lighten(@other-gray,20%),@white);
+  background-image:linear-gradient(@white,lighten(@other-gray,20%));
   box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.3);
-
+  @media @mobile{
+    text-align: justify;
+  }
   .mission-btn{
     .buttoned();
     padding:2% 10%;
@@ -128,6 +133,9 @@ body {
   h2{background-size: cover;
     font-family:'Anton', sans-serif;
     color:@color3;
+    @media @mobile{
+      text-align:center;
+    }
   }
   .inline{
     width:120px;
@@ -137,14 +145,18 @@ body {
   p{
     padding:50px;
     @media @mobile{
-      padding: 50px 0;
+      padding: 50px 3px;;
+      @media @mobile{
+        text-align: justify;
+      }
     }
   }
 }
 .bg-container1{
   background-image: url('../assets/texture.jpg');
   background-repeat: no-repeat;
-  background-position: right top;    background-size: cover;
+  background-position: right top;    
+  background-size: cover;
   background-blend-mode: lighten;
   background-color:rgba(255,255,255,.1);
   width:100%;
@@ -205,13 +217,22 @@ body {
     }
   }
 } 
-
+.bg-container2{
+background-image: url('../assets/texture1.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;    
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color:rgba(black,.6);
+  width:100%;
+}  
 .about-main h2{
   font-family: 'Anton', sans-serif;
     color: @white;
     line-height: 1.4;
     padding:70px;
     background-color: @color3;
+    background-image:linear-gradient(lighten(@color3,15%), @color3);
 }
 
 .team-container{
@@ -223,6 +244,17 @@ body {
   padding:10px;
   .team{
     margin-top:50px;
+    padding:10px;
+    background-image:linear-gradient(@other-gray,lighten(@other-gray,15%));
+    // background-color:lighten(@other-gray, 10%);
+  }
+  .person-content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .person-info{
+    width:60%
   }
   .team img{
     width: 300px;
@@ -233,11 +265,21 @@ body {
     font-family: 'Anton', sans-serif;
     font-size: 1.7rem;
     font-weight: lighter;
-    color: @gray;
+    color: darken(@gray,10%);
+    margin:0;
   }
   h4{
     font-size:1.5rem;
-    border-bottom: 1px solid @gray;
+    margin:0;
   }
 }
+.about-main .team-container .contact-link{
+  font-size: 32px;
+  text-decoration:none;
+  color: @color3;
+  text-shadow:0 0 5px @button-bg;
+  float:right;
+  padding-left:10px;
+}
+
   
